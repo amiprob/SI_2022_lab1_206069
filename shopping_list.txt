@@ -2,4 +2,4 @@ mleko x 2
 jajca x 25
 brasno x 3
 sol x 1
-zejtin x 3
+zejtin x 5
