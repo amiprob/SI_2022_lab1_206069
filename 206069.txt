@@ -1,0 +1,137 @@
+Objasnuvanja na prasanjata i komandi: 
+
+4 .  C:\Users\User\Desktop>git clone https://github.com/amiprob/SI_2022_lab1_206069.git  ---- kloniranje na repozitoriumot
+     C:\Users\User\Desktop>cd .\SI_2022_lab1_206069 --------- vlez vo lokalniot repozitorium
+5.   C:\Users\User\Desktop\SI_2022_lab1_206069>git add shopping_list.txt
+     C:\Users\User\Desktop\SI_2022_lab1_206069>git commit -m "Add 5 items to the shopping list"
+        [master b1ad509] Add 5 items to the shopping list
+        1 file changed, 5 insertions(+)
+        create mode 100644 shopping_list.txt
+( Ja kreirav datotekata vo lokalniot repozitorium i vo notepad ja editirav taka shto potoa gi napraviv komandite add i commit )
+6.   C:\Users\User\Desktop\SI_2022_lab1_206069>git add shopping_list.txt
+     C:\Users\User\Desktop\SI_2022_lab1_206069>git commit -m "Add quantites to the items"
+        [master cd43821] Add quantites to the items
+        1 file changed, 5 insertions(+), 5 deletions(-)
+     
+  ( Gi napraviv izmenite vo notepad gi zacuvav, potoa git add, git commit )
+
+7. C:\Users\User\Desktop\SI_2022_lab1_206069>git branch branch1
+   C:\Users\User\Desktop\SI_2022_lab1_206069>git branch branch2
+
+9. C:\Users\User\Desktop\SI_2022_lab1_206069>git push
+   C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout branch1
+   C:\Users\User\Desktop\SI_2022_lab1_206069>git push origin branch1
+   C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout branch2
+   C:\Users\User\Desktop\SI_2022_lab1_206069>git push origin branch2
+
+( Prvo na master se kreiraat dve granki, branch 1 i branch2, potoa se pravi git push na master-ot na remote repozitoriumot, pa se prefrluvame na branch1 so checkout, i 
+se prave git push na ovaa granka kako remote granka na remote repozitoriumot. Istoto i za branch 2)
+
+10.C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout branch1
+
+11. C:\Users\User\Desktop\SI_2022_lab1_206069>git add shopping_list.txt
+    C:\Users\User\Desktop\SI_2022_lab1_206069>git commit -m "Change quantity of item #5"
+      [branch1 938b9f8] Change quantity of item #5
+      1 file changed, 1 insertion(+), 1 deletion(-)
+
+12.  C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout master
+    Switched to branch 'master'
+    Your branch is up to date with 'origin/master'.
+
+13.C:\Users\User\Desktop\SI_2022_lab1_206069>git add shopping_list.txt
+   C:\Users\User\Desktop\SI_2022_lab1_206069>git commit -m "Change quantity of item #2"
+   [master d8515d7] Change quantity of item #2
+    1 file changed, 1 insertion(+), 1 deletion(-)
+
+14.   C:\Users\User\Desktop\SI_2022_lab1_206069>git push
+          Enumerating objects: 5, done.
+          Counting objects: 100% (5/5), done.
+          Delta compression using up to 4 threads
+          Compressing objects: 100% (3/3), done.
+          Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+          Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+          To https://github.com/amiprob/SI_2022_lab1_206069.git
+          cd43821..d8515d7  master -> master
+
+C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout branch1
+Switched to branch 'branch1'
+
+C:\Users\User\Desktop\SI_2022_lab1_206069>git push origin branch1
+      Enumerating objects: 5, done.
+      Counting objects: 100% (5/5), done.
+      Delta compression using up to 4 threads
+      Compressing objects: 100% (3/3), done.
+      Writing objects: 100% (3/3), 338 bytes | 112.00 KiB/s, done.
+      Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+      To https://github.com/amiprob/SI_2022_lab1_206069.git
+      cd43821..938b9f8  branch1 -> branch1
+
+C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout branch2
+Switched to branch 'branch2'
+
+C:\Users\User\Desktop\SI_2022_lab1_206069>git push origin branch2
+Everything up-to-date
+
+( Istata postapka i pogore e opisana )
+
+15. C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout branch2
+
+16.  C:\Users\User\Desktop\SI_2022_lab1_206069>git add shopping_list.txt
+    C:\Users\User\Desktop\SI_2022_lab1_206069>git commit -m "Modify item #4"
+       [branch2 fcbbfcc] Modify item #4
+       1 file changed, 1 insertion(+), 1 deletion(-)
+18. C:\Users\User\Desktop\SI_2022_lab1_206069>git add shopping_list.txt
+    C:\Users\User\Desktop\SI_2022_lab1_206069>git commit --amend -m "Modify item #4 and add item #6"
+       [branch2 9190636] Modify item #4 and add item #6
+       Date: Fri Apr 8 23:33:20 2022 +0200
+       1 file changed, 2 insertions(+), 1 deletion(-)
+20. C:\Users\User\Desktop\SI_2022_lab1_206069>git checkout master
+      Switched to branch 'master'
+      Your branch is up to date with 'origin/master'.
+
+      C:\Users\User\Desktop\SI_2022_lab1_206069>git merge branch1
+      Auto-merging shopping_list.txt
+      Merge made by the 'ort' strategy.
+      shopping_list.txt | 2 +-
+      1 file changed, 1 insertion(+), 1 deletion(-)
+Spojuvanjeto e napraveno so rekurzivna strategija (ort znaci toa, vo ovaa verzija na git).Ovde nema pojava na konflikt.
+
+21.C:\Users\User\Desktop\SI_2022_lab1_206069>git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Tuka nastanuva konflikt. Ja otvoriv momentalnata datoteka i nejziniot izgled bese sledniot:
+
+mleko x 2
+jajca x 25
+brasno x 3
+<<<<<<< HEAD
+sol x 1
+zejtin x 5
+=======
+piper x 1
+zejtin x 3
+torta
+>>>>>>> branch2
+
+Konfliktot e resen na toj nacin shto se nametnuvaat izmenite napraveni od branch2, pa noviot izgled na datotekata ke bide:
+mleko x 2
+jajca x 25
+brasno x 3
+piper x 1
+zejtin x 3
+torta
+ C:\Users\User\Desktop\SI_2022_lab1_206069>git commit -a -m "Merge branch2"
+[master 5651282] Merge branch2
+
+C:\Users\User\Desktop\SI_2022_lab1_206069>git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+
+
